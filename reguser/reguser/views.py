@@ -49,7 +49,7 @@ def UserLogin(request):
                 login(request, user)
                 # messages.success(request, "Successfully find the user")
                 # return render(request,'registration/login.html')
-                return render(request,'home.html')
+                return redirect("../../")
             else:
                 messages.error(request, "Invalid informations")
                 return render(request,'registration/login.html')

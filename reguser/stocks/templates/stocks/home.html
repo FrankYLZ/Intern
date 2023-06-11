@@ -29,18 +29,8 @@
 
         <h2 class="contributor">{% trans "Version 0.2 20230606" %}</h2> 
         <!-- <h2 class="contributor">Contributor: Austin Li</h2>  -->
-
-        {% block content %}
-        {% if user.is_authenticated %}
-            <h4> Hi {{ user.username }}!</h4>
-            <p><a class="btn btn-primary" href="{% url 'logout' %}">{% trans "Log Out" %}</a></p>
-            <p><a class="btn btn-primary" href="{% url 'password_reset' %}">{% trans "Reset Password" %}</a></p>
-        {% else %}
-            <p>You are not logged in</p>
-            <p><a class="btn btn-primary" href="{% url 'login' %}">{% trans "Log In" %}</a></p>
-        {% endif %}
-        {% endblock %}
         <p><a class="btn btn-primary" href="{% url 'stocks:predict_price' %}">{% trans "Get Predicted Stock Prices" %}</a></p>
+        <p><a class="btn btn-primary" href="../">{% trans "Log Out" %}</a></p>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
