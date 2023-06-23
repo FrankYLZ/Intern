@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url('{% static "background1.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -15,6 +17,17 @@
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
+        }
+        .container {
+            position: relative;
+            background-color: rgba(248, 249, 250, 0.8);  /* semi-transparent white */
+            padding: 20px;
+            border-radius: 15px;
+        }
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
         }
         .center-div {
             width: 100%;
@@ -44,21 +57,22 @@
 </head>
 <body>
     <div class="container center-div">
+        
         <div class="text-center">
             <img src="{% static 'logo2.png' %}" alt="Company Logo" class="logo-image mb-3">
         </div>
         <h1 class="text-center mb-3">Stock Price Inquiry</h1>
-        <h2 class="contributor">Version 0.2</h2> 
+        
         <div class="custom-form mb-5">
             <form method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                    <label for="stockSymbol">Stock Symbol:</label>
+                    <label for="stockSymbol">Enter Stock Symbol:</label>
                     <input type="text" id="stockSymbol" name="stockSymbol" class="form-control">
                 </div>
-                <input type="submit" value="Predict" class="btn btn-primary">
+                <input type="submit" value="Inquiry" class="btn btn-primary">
                 <a href="{% url 'stocks:clear_history' %}" class="btn btn-secondary">Clear History</a>
-                <a href="{% url 'home' %}" class="btn btn-outline-dark float-right">Back Home</a>
+                <a href="../" class="btn btn-outline-dark back-button">Back</a>
             </form>
         </div>
         

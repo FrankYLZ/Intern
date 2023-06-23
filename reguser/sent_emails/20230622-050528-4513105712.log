@@ -1,0 +1,23 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: CCC@gmail.com
+Date: Thu, 22 Jun 2023 05:05:28 -0000
+Message-ID: 
+ <168741032884.84779.14045289746637109106@Frankzhouyalins-MacBook-Pro.local>
+
+
+To initiate the password reset process for your CCC TestSite Account,
+click the link below:
+
+http://127.0.0.1:8000/accounts/reset/MTA/bq6jh4-79c54bce817af6b63f9d092dbfe46517/
+
+If clicking the link above doesn't work, please copy and paste the URL in a new browser
+window instead.
+
+Sincerely,
+The TestSite Team
+
+-------------------------------------------------------------------------------

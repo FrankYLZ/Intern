@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: CCC@gmail.com
+Date: Fri, 23 Jun 2023 03:10:07 -0000
+Message-ID: 
+ <168748980763.87783.14571466808786250845@20.1.168.192.in-addr.arpa>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/MTA/bq88sv-421ce0bc1e114a10f471a7e399b7f3cf/
+
+Your username, in case you’ve forgotten: CCC
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

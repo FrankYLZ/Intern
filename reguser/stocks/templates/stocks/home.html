@@ -6,9 +6,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url('{% static "background1.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
             padding: 20px;
             box-sizing: border-box;
+        }
+        .container {
+            background-color: rgba(248, 249, 250, 0.8);  /* semi-transparent white */
+            padding: 20px;
+            border-radius: 15px;
         }
         .center-div {
             display: flex;
@@ -19,19 +26,70 @@
             width: 150px;  /* Adjust this value as needed */
             height: auto;  /* This makes the image keep its aspect ratio */
         }
+        h1 {
+            font-size: 3em; /* Increased the size of the Heading */
+        }
+        .button-29 {
+            align-items: center;
+            appearance: none;
+            background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+            box-sizing: border-box;
+            color: #fff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "JetBrains Mono",monospace;
+            height: 48px;
+            justify-content: center;
+            line-height: 1;
+            list-style: none;
+            overflow: hidden;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow .15s,transform .15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow,transform;
+            font-size: 18px;
+        }
+
+        .button-29:focus {
+            box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+        }
+
+        .button-29:hover {
+            box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+            transform: translateY(-2px);
+        }
+
+        .button-29:active {
+            box-shadow: #3c4fe0 0 3px 7px inset;
+            transform: translateY(2px);
+        }
+
+
+        
     </style>
 </head>
 <body>
     <div class="container center-div text-center">
         <img src="{% static 'logo2.png' %}" alt="Company Logo" class="logo-image">
         {% load i18n %}
-        <h1>{% trans "Welcome to the Stock Price Inquiry Example Page" %}</h1>
+        <h1>{% trans "Welcome to Global Financial Inquiry Platform" %}</h1>
 
-        <h2 class="contributor">{% trans "Version 0.2 20230606" %}</h2> 
-        <!-- <h2 class="contributor">Contributor: Austin Li</h2>  -->
-        <p><a class="btn btn-primary" href="{% url 'stocks:predict_price' %}">{% trans "Get Predicted Stock Prices" %}</a></p>
-        <p><a class="btn btn-primary" href="../">{% trans "Log Out" %}</a></p>
+        <p><a class="button-29" href="{% url 'stocks:predict_price' %}">{% trans "Inquiry" %}</a></p>
+        <p><a class="button-29" href="../">{% trans "Log Out" %}</a></p>
     </div>
+  
+    
+      
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
